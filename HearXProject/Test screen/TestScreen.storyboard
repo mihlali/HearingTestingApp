@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Test Screen View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="TestScreenViewController" customModule="HearXProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Input Answer " textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L32-tR-QFC">
+                                <rect key="frame" x="20" y="276" width="353" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mzl-Ai-rka" customClass="CustomButton" customModule="HearXProject" customModuleProvider="target">
+                                <rect key="frame" x="20" y="427" width="353" height="14"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="buttonColor">
+                                        <color key="value" systemColor="systemIndigoColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="buttonText" value="Submit"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="submitButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="0qh-vp-jSQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zGB-Cy-I1d" customClass="CustomButton" customModule="HearXProject" customModuleProvider="target">
+                                <rect key="frame" x="20" y="474" width="353" height="14"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="buttonColor">
+                                        <color key="value" systemColor="systemIndigoColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="buttonText" value="Exit Test"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="ExitButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="VXb-4g-hfg"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="speaker.wave.2" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="rAc-X8-BAj">
+                                <rect key="frame" x="146.66666666666666" y="111" width="100" height="96.333333333333314"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Gv1-cK-C5o"/>
+                                    <constraint firstAttribute="width" constant="100" id="WGA-hM-eQY"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" red="0.75805148155608926" green="0.70366408924850099" blue="0.77041720360824739" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="zGB-Cy-I1d" secondAttribute="trailing" constant="20" id="0u7-ne-P6X"/>
+                            <constraint firstItem="rAc-X8-BAj" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="50" id="4Ln-fD-NaU"/>
+                            <constraint firstItem="mzl-Ai-rka" firstAttribute="top" secondItem="L32-tR-QFC" secondAttribute="bottom" constant="117" id="6Hd-FM-EKF"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="mzl-Ai-rka" secondAttribute="trailing" constant="20" id="CyY-UC-gkd"/>
+                            <constraint firstItem="L32-tR-QFC" firstAttribute="centerX" secondItem="rAc-X8-BAj" secondAttribute="centerX" id="GpO-jc-Ugm"/>
+                            <constraint firstItem="mzl-Ai-rka" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="Id9-fh-oqA"/>
+                            <constraint firstItem="L32-tR-QFC" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="S00-1X-0RF"/>
+                            <constraint firstItem="zGB-Cy-I1d" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="WI0-V4-VKb"/>
+                            <constraint firstItem="zGB-Cy-I1d" firstAttribute="centerX" secondItem="mzl-Ai-rka" secondAttribute="centerX" id="cKB-iU-5HI"/>
+                            <constraint firstItem="rAc-X8-BAj" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="hL4-BO-MLk"/>
+                            <constraint firstItem="zGB-Cy-I1d" firstAttribute="top" secondItem="mzl-Ai-rka" secondAttribute="bottom" constant="33" id="hiD-7v-LCb"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="L32-tR-QFC" secondAttribute="trailing" constant="20" id="sNn-dt-LgP"/>
+                            <constraint firstItem="L32-tR-QFC" firstAttribute="top" secondItem="rAc-X8-BAj" secondAttribute="bottom" constant="67" id="u9h-Qf-4cF"/>
+                            <constraint firstItem="mzl-Ai-rka" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="v0n-uH-PXd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="answerTextField" destination="L32-tR-QFC" id="Pp8-FM-dbv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="113" y="-2"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="speaker.wave.2" catalog="system" width="128" height="88"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
